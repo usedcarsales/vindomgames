@@ -653,6 +653,104 @@
       color: var(--muted-dim);
     }
 
+    /* ── FEATURED INVENTORY ── */
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-top: 3rem;
+    }
+
+    .featured-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-card:hover {
+      border-color: rgba(45, 122, 62, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.25rem 0.6rem;
+      border-radius: 5px;
+    }
+
+    .featured-badge.ebay { background: rgba(229, 78, 13, 0.15); color: #ff8a65; }
+    .featured-badge.tcg { background: rgba(0, 125, 195, 0.15); color: #4fc3f7; }
+    .featured-badge.boba { background: var(--purple-glow); color: var(--purple-bright); }
+
+    .featured-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--surface2);
+      border: 1px dashed var(--border-light);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+      color: var(--muted-dim);
+      font-weight: 500;
+    }
+
+    .featured-placeholder span {
+      font-size: 2.5rem;
+    }
+
+    .featured-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 0.35rem;
+    }
+
+    .featured-price {
+      font-size: 0.9rem;
+      color: var(--green-bright);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .featured-link {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--green-bright);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .featured-cta {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .featured-cta p {
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -873,6 +971,114 @@
 
     <div class="expanding-soon">
       <strong>Expanding Soon:</strong> Panini Soccer, Topps Chrome, Topps NBA — coming as we secure authorized wholesale relationships.
+    </div>
+  </section>
+
+  <!-- FEATURED INVENTORY -->
+  <section id="featured">
+    <div class="section-header">
+      <div class="section-label">Featured Inventory</div>
+      <h2 class="section-title">Current Listings</h2>
+      <p class="section-sub">Browse our active listings across eBay, TCGplayer, and BoBA Storefront.</p>
+    </div>
+
+    <div class="featured-grid">
+      <a href="https://www.ebay.com/usr/vindomgames" target="_blank" rel="noopener" class="featured-card">
+        <div class="featured-badge ebay">eBay</div>
+        <div class="featured-placeholder">
+          <span>🏈</span>
+          Bo Jackson Battle Arena
+        </div>
+        <div class="featured-name">Bo Jackson Battle Arena Singles</div>
+        <div class="featured-price">Starting at $5</div>
+        <span class="featured-link">View on eBay →</span>
+      </a>
+
+      <a href="https://www.ebay.com/usr/vindomgames" target="_blank" rel="noopener" class="featured-card">
+        <div class="featured-badge ebay">eBay</div>
+        <div class="featured-placeholder">
+          <span>📦</span>
+          Sealed Product
+        </div>
+        <div class="featured-name">Bo Jackson Sealed Packs</div>
+        <div class="featured-price">Starting at $15</div>
+        <span class="featured-link">View on eBay →</span>
+      </a>
+
+      <a href="https://www.tcgplayer.com/sellers/Vindom-Games/6c76d173/" target="_blank" rel="noopener" class="featured-card">
+        <div class="featured-badge tcg">TCGplayer</div>
+        <div class="featured-placeholder">
+          <span>🟡</span>
+          Pokemon TCG
+        </div>
+        <div class="featured-name">Pokemon Singles &amp; Holos</div>
+        <div class="featured-price">Starting at $1</div>
+        <span class="featured-link">View on TCGplayer →</span>
+      </a>
+
+      <a href="https://www.tcgplayer.com/sellers/Vindom-Games/6c76d173/" target="_blank" rel="noopener" class="featured-card">
+        <div class="featured-badge tcg">TCGplayer</div>
+        <div class="featured-placeholder">
+          <span>✨</span>
+          Pokemon Sealed
+        </div>
+        <div class="featured-name">Pokemon Sealed Boosters &amp; Boxes</div>
+        <div class="featured-price">Starting at $12</div>
+        <span class="featured-link">View on TCGplayer →</span>
+      </a>
+
+      <a href="https://www.tcgplayer.com/sellers/Vindom-Games/6c76d173/" target="_blank" rel="noopener" class="featured-card">
+        <div class="featured-badge tcg">TCGplayer</div>
+        <div class="featured-placeholder">
+          <span>⚔️</span>
+          One Piece Card Game
+        </div>
+        <div class="featured-name">One Piece Card Game Singles</div>
+        <div class="featured-price">Starting at $2</div>
+        <span class="featured-link">View on TCGplayer →</span>
+      </a>
+
+      <a href="https://www.tcgplayer.com/sellers/Vindom-Games/6c76d173/" target="_blank" rel="noopener" class="featured-card">
+        <div class="featured-badge tcg">TCGplayer</div>
+        <div class="featured-placeholder">
+          <span>🧚</span>
+          Lorcana TCG
+        </div>
+        <div class="featured-name">Disney Lorcana Singles</div>
+        <div class="featured-price">Starting at $3</div>
+        <span class="featured-link">View on TCGplayer →</span>
+      </a>
+
+      <a href="https://bobatrader.com" target="_blank" rel="noopener" class="featured-card">
+        <div class="featured-badge boba">BoBA</div>
+        <div class="featured-placeholder">
+          <span>⚡</span>
+          BoBA Exclusive
+        </div>
+        <div class="featured-name">Bo Jackson Battle Arena Catalog</div>
+        <div class="featured-price">Direct Pricing</div>
+        <span class="featured-link">Visit BoBA Storefront →</span>
+      </a>
+
+      <a href="https://www.ebay.com/usr/vindomgames" target="_blank" rel="noopener" class="featured-card">
+        <div class="featured-badge ebay">eBay</div>
+        <div class="featured-placeholder">
+          <span>🏆</span>
+          Specialty Items
+        </div>
+        <div class="featured-name">Graded Slabs &amp; Specialty Cards</div>
+        <div class="featured-price">Starting at $10</div>
+        <span class="featured-link">View on eBay →</span>
+      </a>
+    </div>
+
+    <div class="featured-cta">
+      <p>Inventory updated regularly across all channels.</p>
+      <div class="cta-group">
+        <a href="https://www.ebay.com/usr/vindomgames" target="_blank" rel="noopener" class="btn btn-primary">Shop eBay</a>
+        <a href="https://www.tcgplayer.com/sellers/Vindom-Games/6c76d173/" target="_blank" rel="noopener" class="btn btn-secondary">Shop TCGplayer</a>
+        <a href="https://bobatrader.com" target="_blank" rel="noopener" class="btn btn-secondary">Visit BoBA</a>
+      </div>
     </div>
   </section>
 
